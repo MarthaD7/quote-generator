@@ -3,7 +3,7 @@ import Quote from "./Quote/Quote";
 
 function App() {
   return (
-    null
+    <Quote />
   );
 }
 
