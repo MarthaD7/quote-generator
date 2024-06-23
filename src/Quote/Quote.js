@@ -1,5 +1,6 @@
-import "../Quote/Quote.scss";
 import { useEffect, useState } from "react";
+
+
 const quoteUrl = "https://inspo-quotes-api.herokuapp.com/quotes/random";
 
 export default function QuoteFetcher() {
@@ -27,15 +28,18 @@ export default function QuoteFetcher() {
     }
 
     return (
-        <div>
+
+        <div className="quote">
             <h1>{quote.text}</h1>
             <h2>{quote.author}</h2>
-            <button onClick={fetchQuote}>Quote me!</button>
+            <button className="button" onClick={fetchQuote}>Quote me!</button>
         </div>
     );
 }
 
-
+// Would an arrow function be a better choice? Part of me doesn't think so,
+// because it would technically be a bit more code. I would have to add 
+//export default QuoteFetcher at the bottom.
 
 
 
